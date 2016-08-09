@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module JobHunter
   class Application < Rails::Application
     config.active_job.queue_adapter = :delayed_job
-    config.secret_key_base = ENV["SECRET_KEY_BASE"]
+    config.secret_key_base = ENV["SECRET_KEY_BASE"] || '4649bb019d37d0fd57aee6b0a01c5c898de41a2d6f2f82b1da881436d216119a3592816fb1c44d23480e5b99d2a233ec3b3d60a27dfd9f67763c8cb23d64e755'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
